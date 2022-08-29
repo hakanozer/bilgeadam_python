@@ -206,3 +206,364 @@ for x in list1:
 
         
 This val: Veli
+for x in list1:
+    if 'Veli' == x:
+        print("This val: ", x)
+
+        
+This val:  Veli
+list2 = ["Ankara", "İzmir", "İstanbul", "Samsun", "Antalya", "Adana"]
+list3 = []
+for item in list2:
+    if item in "a":
+        list3.append(item)
+
+        
+print(list3)
+[]
+for item in list2:
+    if "a" in item:
+        list3.append(item)
+
+        
+print(list3)
+['Ankara', 'İstanbul', 'Samsun', 'Antalya', 'Adana']
+list3 = []
+print(list3)
+[]
+list3 = [ item for item in list2  ]
+print( list3 )
+['Ankara', 'İzmir', 'İstanbul', 'Samsun', 'Antalya', 'Adana']
+list3 = [ item for item in list2 if "a" in item ]
+print(list3)
+['Ankara', 'İstanbul', 'Samsun', 'Antalya', 'Adana']
+list3 = [ item.upper() for item in list2 if "a" in item ]
+print(list3)
+['ANKARA', 'İSTANBUL', 'SAMSUN', 'ANTALYA', 'ADANA']
+list2.sort()
+print(list2)
+['Adana', 'Ankara', 'Antalya', 'Samsun', 'İstanbul', 'İzmir']
+list2.sort(reverse=True)
+print(list2)
+['İzmir', 'İstanbul', 'Samsun', 'Antalya', 'Ankara', 'Adana']
+list4 = [33,45,67,89,23,11,23,99]
+def fncSort(item):
+    return item * 3
+list4.sort(key=fncSort)
+SyntaxError: invalid syntax
+list4.sort(key = fncSort)
+Traceback (most recent call last):
+  File "<pyshell#148>", line 1, in <module>
+    list4.sort(key = fncSort)
+NameError: name 'fncSort' is not defined
+def fncSort(n):
+    return n * 3
+list4.sort(key=fncSort)
+SyntaxError: invalid syntax
+def fncSort(n):
+    return n - 3
+list4.sort(key=fncSort)
+SyntaxError: invalid syntax
+def myfunc(n):
+  return abs(n - 50)
+list4.sort(key=myfunc)
+SyntaxError: invalid syntax
+def myfunc(n):
+  return abs(n - 50)
+
+list4.sort(key = myfunc)
+SyntaxError: invalid syntax
+list4.sort( key = int.bit_count )
+print(list4)
+[33, 67, 11, 45, 89, 23, 23, 99]
+
+
+
+
+
+
+
+
+
+
+list5 = ["A", "B", "C"]
+list6 = list5
+print(list6)
+['A', 'B', 'C']
+list5.append("D")
+print(list6)
+['A', 'B', 'C', 'D']
+list5 = ["A", "B", "C"]
+list6 = list5.copy()
+print(list6)
+['A', 'B', 'C']
+list5.append("D")
+print(list6)
+['A', 'B', 'C', 'D']
+SyntaxError: multiple statements found while compiling a single statement
+['A', 'B', 'C', 'D']
+['A', 'B', 'C', 'D']
+list6 = list5.copy()
+ list5.append("E")
+ 
+SyntaxError: unexpected indent
+list7 = ["A", "B", "C"]
+list8  = list7.copy()
+list7.append("D")
+print( list8 )
+['A', 'B', 'C']
+list9 = list5
+list10 = list5
+list9 = list5
+list10 = list9
+SyntaxError: multiple statements found while compiling a single statement
+list9 = list5
+list10 = list9
+
+
+
+
+
+listx = [ item for item in list4 ]
+,
+SyntaxError: multiple statements found while compiling a single statement
+listx = [ item for item in list4 ]
+listx.append(101)
+SyntaxError: multiple statements found while compiling a single statement
+listy = [ item for item in list4 ]
+listy.append(101)
+SyntaxError: multiple statements found while compiling a single statement
+listy = [ for item in list4 ]
+listy.append(101)
+SyntaxError: invalid syntax
+listy = [ item for item in list4 ]
+print(listy)
+[33, 67, 11, 45, 89, 23, 23, 99]
+listy = [ item for item in list4 ]
+listy.append(101)
+print(listy)
+[33, 67, 11, 45, 89, 23, 23, 99, 101]
+print( list4 )
+[33, 67, 11, 45, 89, 23, 23, 99]
+
+
+
+
+arr1 = ('ali', 22, 56.7, True, 😂)
+SyntaxError: invalid character '😂' (U+1F602)
+arr1 = ('ali', 22, 56.7, True, U+1F602)
+SyntaxError: invalid decimal literal
+arr1 = ('ali', 22, 56.7, True, 😂)
+SyntaxError: invalid character '😂' (U+1F602)
+arr1 = ('ali', 22, 56.7, True, "Mehmet", "Serkan")
+print( type(arr1) )
+<class 'tuple'>
+print( arr1[0] )
+ali
+arr1[0] = "Zehra"
+Traceback (most recent call last):
+  File "<pyshell#204>", line 1, in <module>
+    arr1[0] = "Zehra"
+TypeError: 'tuple' object does not support item assignment
+newList = list(arr1)
+newList[0] = "Zehra"
+arr1 = tuple(newList)
+print( arr1 )
+('Zehra', 22, 56.7, True, 'Mehmet', 'Serkan')
+for item in arr1:
+    print(item)
+
+    
+Zehra
+22
+56.7
+True
+Mehmet
+Serkan
+for 1...3 in arr1:
+    
+SyntaxError: cannot assign to literal
+for 1...3 arr1:
+    
+SyntaxError: cannot assign to literal
+for i in 3 {
+    
+SyntaxError: '{' was never closed
+for i in 3:
+print(arr1[i])
+SyntaxError: expected an indented block after 'for' statement on line 1
+for i in 0...3:
+print(arr1[i])
+SyntaxError: invalid syntax
+for i in range(len(arr1)):
+print(arr1[i])
+SyntaxError: expected an indented block after 'for' statement on line 1
+for i in range(len(arr1)):
+    print(arr1[i])
+
+Zehra
+22
+56.7
+True
+Mehmet
+Serkan
+for i in 1...3):
+    print(arr1[i])
+    
+SyntaxError: unmatched ')'
+for i in 1...3:
+    print(arr1[i])
+    
+SyntaxError: invalid syntax
+for i in 1..3:
+    print(arr1[i])
+    
+SyntaxError: invalid syntax
+for i in 1_3:
+    print(arr1[i])
+
+    
+Traceback (most recent call last):
+  File "<pyshell#226>", line 1, in <module>
+    for i in 1_3:
+TypeError: 'int' object is not iterable
+print( arr1.count )
+<built-in method count of tuple object at 0x10df616c0>
+print( arr1.count() )
+Traceback (most recent call last):
+  File "<pyshell#228>", line 1, in <module>
+    print( arr1.count() )
+TypeError: tuple.count() takes exactly one argument (0 given)
+print( arr1.count(1) )
+1
+print( arr1.count(3) )
+0
+print( arr1[0])
+Zehra
+for i in 1,3:
+    print(arr1[i])
+
+    
+22
+True
+for i in 1,len(arr1):
+    print(arr1[i])
+
+    
+22
+Traceback (most recent call last):
+  File "<pyshell#235>", line 2, in <module>
+    print(arr1[i])
+IndexError: tuple index out of range
+for i in 1,len(arr1) - 1:
+    print(arr1[i])
+
+    
+22
+Serkan
+for i in 0,len(arr1) - 1:
+    print(arr1[i])
+
+    
+Zehra
+Serkan
+for i in 0,len(arr1):
+    print(arr1[i])
+
+    
+Zehra
+Traceback (most recent call last):
+  File "<pyshell#243>", line 2, in <module>
+    print(arr1[i])
+IndexError: tuple index out of range
+for i in 0,len(arr1) -1:
+    print(arr1[i])
+
+    
+Zehra
+Serkan
+for i in 0,1,2,len(arr1) -1:
+    print(arr1[i])
+
+    
+Zehra
+22
+56.7
+Serkan
+sizeArr = [0,3,4]
+for i in sizeArr:
+    print(arr1[i])
+    
+SyntaxError: multiple statements found while compiling a single statement
+
+
+
+
+newSet = {}
+print( type(newSet) )
+<class 'dict'>
+newSet = {}print( type(newSet) )
+SyntaxError: invalid syntax
+newSet = {"Ali"}
+newSet = {"Ali", "Veli", "Serkan", "Veli"}
+print( newSet )
+{'Veli', 'Ali', 'Serkan'}
+newSet = {"Ali", "Veli", "Serkan", "Veli"}
+print( type(newSet) )
+<class 'set'>
+print(len(newSet))
+3
+newSet.add("Mehmet")
+print(newSet)
+{'Veli', 'Ali', 'Mehmet', 'Serkan'}
+newSet.remove("Serkan")
+print( newSet )
+{'Veli', 'Ali', 'Mehmet'}
+deleteItem = newSet.pop()
+print( deleteItem )
+Veli
+Veli
+Traceback (most recent call last):
+  File "<pyshell#270>", line 1, in <module>
+    Veli
+NameError: name 'Veli' is not defined
+print( newSet )
+{'Ali', 'Mehmet'}
+
+
+
+
+dic = { name: "Serkan", surname: "Bilmem", age: 30, email: "serkan@mail.com" }
+Traceback (most recent call last):
+  File "<pyshell#275>", line 1, in <module>
+    dic = { name: "Serkan", surname: "Bilmem", age: 30, email: "serkan@mail.com" }
+NameError: name 'email' is not defined. Did you mean: 'eval'?
+dic = { "name": "Serkan", "surname": "Bilmem", "age": 30, "email": "serkan@mail.com" }
+dic = { "name": "Serkan", "surname": "Bilmem", "age": 30, "email": "serkan@mail.com" }
+print(dic)
+{'name': 'Serkan', 'surname': 'Bilmem', 'age': 30, 'email': 'serkan@mail.com'}
+dic = { "name": "Serkan", "surname": "Bilmem", "age": 30, "email": "serkan@mail.com", status: True}
+print ( dic )
+{'name': 'Serkan', 'surname': 'Bilmem', 'age': 30, 'email': 'serkan@mail.com', 'Serkan': True}
+print( dic["name"] )
+Serkan
+print( len( dic ) )
+5
+keys = dic.keys()
+print( keys )
+dict_keys(['name', 'surname', 'age', 'email', 'Serkan'])
+dic = { "name": "Serkan", "surname": "Bilmem", "age": 30, "email": "serkan@mail.com", "status": True}
+keys = dic.keys()
+print( keys )
+dict_keys(['name', 'surname', 'age', 'email', 'status'])
+print( dic["surname"] )
+Bilmem
+for key in keys:
+    print( dic[key] )
+
+    
+Serkan
+Bilmem
+30
+serkan@mail.com
+True
